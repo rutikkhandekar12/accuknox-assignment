@@ -1,0 +1,14 @@
+.header-dashboard{
+    justify-content: space-between;
+    padding-left: 41px;
+    padding-right: 41px;
+}
+
+.button-dashboard-header{
+    display: flex;
+    gap: 21px;
+}
+
+.header-dashboard{
+    padding: 34px 46px 0px 46px;
+}
