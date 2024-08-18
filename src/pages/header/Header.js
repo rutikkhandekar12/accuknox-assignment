@@ -1,12 +1,11 @@
-import { useState } from "react";
 import "./Header.css";
-import { Box, Flex, Input } from "@chakra-ui/react";
+import { Box, Input } from "@chakra-ui/react";
 import { BellIcon, SearchIcon } from "@chakra-ui/icons";
 
 const Header = ({setSearch, search, setKeyDown}) => {
   
   return (
-    <div className="header">
+    <Box className="header">
       <p className="navbar">
         <span style={{ color: "gray" }}>Home </span>{" "}
         <span
@@ -35,7 +34,7 @@ const Header = ({setSearch, search, setKeyDown}) => {
       </Box>
       <BellIcon boxSize={6}/>
       </Box>
-    </div>
+    </Box>
   );
 };
 

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Box, Checkbox, Flex, Text } from "@chakra-ui/react";
+import "./Checkbox.css";
 
 const CustomCheckbox = ({ widget, widgetId, handleCheck }) => {
   const [isChecked, setIsChecked] = useState(true);
@@ -11,7 +12,7 @@ const CustomCheckbox = ({ widget, widgetId, handleCheck }) => {
   }
 
   return (
-    <Flex align="center">
+    <Flex className="checkbox" align="center">
       <Checkbox
         size="lg"
         colorScheme="purple"
@@ -21,9 +22,6 @@ const CustomCheckbox = ({ widget, widgetId, handleCheck }) => {
       />
       <Box>
         <Text fontWeight="bold">{widget.name}</Text>
-        <Text fontSize="sm" color="gray.500">
-          {widget.text}
-        </Text>
       </Box>
     </Flex>
   );

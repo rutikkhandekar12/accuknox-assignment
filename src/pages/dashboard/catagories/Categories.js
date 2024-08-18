@@ -1,24 +1,24 @@
-import { Heading } from "@chakra-ui/react";
+import { Box, Heading } from "@chakra-ui/react";
 import "./Categories.css";
 import WidgetCard from "../card/WidgetCard";
 
 const Categories = ({ categoryName, widgets }) => {
   return (
-    <div className="catagories">
+    <Box className="catagories">
       <Heading as="h2" size="md">
         {categoryName}
       </Heading>
-      <div className="widget-container">
+      <Box className="widget-container">
         {widgets?.map((widget) => (
-          <div key={widget.id} className="widget-card">
+          <Box key={widget.id} className="widget-card">
             <WidgetCard widgetName={widget.name} widgetText={widget.text} widgetId={widget.id} categoryName={categoryName}/>
-          </div>
+          </Box>
         ))}
-        <div className="widget-card">
+        <Box className="widget-card">
           <WidgetCard categoryName={categoryName}/>
-        </div>
-      </div>
-    </div>
+        </Box>
+      </Box>
+    </Box>
   );
 };
 

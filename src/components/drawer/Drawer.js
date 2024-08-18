@@ -14,14 +14,16 @@ import {
   Text,
   TabPanels,
   TabPanel,
+  useToast,
 } from "@chakra-ui/react";
 import { useDispatch, useSelector } from "react-redux";
 import WidgetTab from "../widget-tab/WidgetTab";
-import { removeWidgets } from "../../slice/catagoriesSlice";
+import { removeUnChecked } from "../../slice/catagoriesSlice";
 
 const AddWidgetDrawer = ({ isOpen, onClose, btnRef }) => {
   const data = useSelector((store) => store.categories.categories);
   const dispatch = useDispatch();
+  const toast = useToast();
   const [checkedWidgets, setCheckedWidgets] = useState({});
 
   function handleCheck(widgetId, isChecked) {
@@ -33,9 +35,23 @@ const AddWidgetDrawer = ({ isOpen, onClose, btnRef }) => {
       (widgetId) => !checkedWidgets[widgetId]
     );
 
-    uncheckedWidgetIds.forEach((widgetId) => {
-      dispatch(removeWidgets({ widgetId })); 
-    });
+    if (uncheckedWidgetIds.length > 0) {
+      uncheckedWidgetIds.forEach((widgetId) => {
+        dispatch(removeUnChecked({widgetId}));
+      });
+
+      toast({
+        title: "Widgets deleted successfully!",
+        status: "success",
+        isClosable: true,
+      });
+    } else {
+      toast({
+        title: "No widgets to delete.",
+        status: "info",
+        isClosable: true,
+      });
+    }
 
     onClose();
   }

@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import './App.css';
 import Dashboard from './pages/dashboard/Dashboard';
 import Header from './pages/header/Header';
 

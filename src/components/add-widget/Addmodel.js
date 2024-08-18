@@ -23,8 +23,6 @@ const AddWidgetModal = ({ isOpen, onClose, categoryName }) => {
   const toast = useToast(); 
 
   function handleAddWidget() {
-    console.log("categoryName:", categoryName);
-
     if (!widgetName || !widgetDescription) {
       toast({
         title: "Please fill in all the fields.",

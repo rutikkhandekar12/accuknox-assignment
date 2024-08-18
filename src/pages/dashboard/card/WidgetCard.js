@@ -1,5 +1,4 @@
 import {
-  Box,
   Button,
   Card,
   CardBody,
@@ -9,7 +8,7 @@ import {
   useDisclosure,
   useToast,
 } from "@chakra-ui/react";
-import { CloseIcon, SmallAddIcon, SmallCloseIcon } from "@chakra-ui/icons";
+import { CloseIcon, SmallAddIcon } from "@chakra-ui/icons";
 import Addmodel from "../../../components/add-widget/Addmodel";
 import "./WidgetCard.css";
 import { useDispatch } from "react-redux";
