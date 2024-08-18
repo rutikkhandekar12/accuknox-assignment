@@ -5,13 +5,13 @@
             "widgets": [
                 {
                     "id":"CSPM widget1",
-                    "name":"CWPP Widget 1",
-                    "text":"Random text for Widget 1"
+                    "name":"CSPM Widget 1",
+                    "text":"Welcome to  CSPM Widget 1"
                 },
                 {
                     "id":"CSPM widget2",
-                    "name":"CWPP Widget 2",
-                    "text":"Random text for Widget 1"
+                    "name":"CSPM Widget 2",
+                    "text":"Welcome to  CSPM Widget 2"
                 }
             ]
         },
@@ -21,12 +21,12 @@
                 {
                     "id":"CWPP widget1",
                     "name":"CWPP Widget 1",
-                    "text":"Random text for Widget 1"
+                    "text":"Welcome to  CWPP Widget 1"
                 },
                 {
                     "id":"CWPP widget2",
                     "name":"CWPP Widget 2",
-                    "text":"Random text for Widget 1"
+                    "text":"Welcome to  CWPP Widget 2"
                 }
             ]
         },
@@ -36,12 +36,27 @@
                 {
                     "id":"Registry widget1",
                     "name":"Registry Widget 1",
-                    "text":"Random text for Widget 1"
+                    "text":"Welcome to  Registry Widget 1"
                 },
                 {
                     "id":"Registry widget2",
                     "name":"Registry Widget 2",
-                    "text":"Random text for Widget 1"
+                    "text":"Welcome to  Registry Widget 2"
+                }
+            ]
+        },
+        {
+            "name": "Ticket Dashboard",
+            "widgets": [
+                {
+                    "id":"Ticket widget1",
+                    "name":"Ticket Widget 1",
+                    "text":"Welcome to  Ticket Widget 1"
+                },
+                {
+                    "id":"Ticket widget2",
+                    "name":"Ticket Widget 2",
+                    "text":"Welcome to  Ticket Widget 2"
                 }
             ]
         }

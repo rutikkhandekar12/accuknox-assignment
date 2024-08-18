@@ -3,9 +3,8 @@ import "./Header.css";
 import { Box, Flex, Input } from "@chakra-ui/react";
 import { BellIcon, SearchIcon } from "@chakra-ui/icons";
 
-const Header = () => {
-  const [search, setSearch] = useState();
-
+const Header = ({setSearch, search, setKeyDown}) => {
+  
   return (
     <div className="header">
       <p className="navbar">
@@ -17,8 +16,8 @@ const Header = () => {
         </span>{" "}
         <span style={{ color: "blue" }}>Dashboard V4</span>
       </p>
-      <Flex alignItems="center" gap="10px">
-      <Box className="search" w="550px">
+      <Box className="search-bell">
+      <Box className="search">
         <SearchIcon
           className="search-icon"
           boxSize={5}
@@ -31,10 +30,11 @@ const Header = () => {
           placeholder="Search anything..."
           value={search}
           onChange={(e) => setSearch(e.target.value)}
+          onKeyUp={(e)=>setKeyDown(e.target.value)}
         />
       </Box>
-      <BellIcon boxSize={6} ml="184px"/>
-      </Flex>
+      <BellIcon boxSize={6}/>
+      </Box>
     </div>
   );
 };

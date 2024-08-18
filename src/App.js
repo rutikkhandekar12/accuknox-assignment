@@ -1,12 +1,17 @@
+import { useState } from 'react';
 import './App.css';
-import Dashboard from './components/dashboard/Dashboard';
-import Header from './components/header/Header';
+import Dashboard from './pages/dashboard/Dashboard';
+import Header from './pages/header/Header';
 
 function App() {
+
+  const [search, setSearch] = useState();
+  const [keyDown, setKeyDown] = useState();
+
   return (
     <div className="App">
-       <Header/>
-       <Dashboard/>
+       <Header setSearch={setSearch} search={search} setKeyDown={setKeyDown}/>
+       <Dashboard  setSearch={setSearch} search={search} keyDown={keyDown}/>
     </div>
   );
 }

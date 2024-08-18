@@ -1,0 +1,46 @@
+.catagories {
+    h2 {
+      font-size: medium;
+      padding-left: 20px;
+      color: #2D3748; 
+    }
+  }
+  
+  .widget-container {
+    display: flex;
+    align-items: center;
+    overflow: auto;
+    padding: 10px;
+    border-radius: 12px;
+    gap: 5px;
+  }
+  
+  .widget-card{
+    border: 14px solid #F5F5F5;
+    border-radius: 23px;
+    transition: transform 0.3s, box-shadow 0.3s; 
+  }
+  
+  .widget-card:hover {
+    transform: scale(1.05); 
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); 
+  }
+  
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: #E2E8F0;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: #4A5568; 
+    border-radius: 10px; 
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: #2D3748; 
+  }
+  
