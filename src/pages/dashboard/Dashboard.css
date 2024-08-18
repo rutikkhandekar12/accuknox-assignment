@@ -2,15 +2,5 @@
     padding: 10px 46px;
 }
 
-@media (max-width: 360px){
-    .categories-container{
-        padding: 15px 5px;
-    }
 
-    .categories{
-        h2{
-            padding: 15px;
-        }
-    }
-}
-
+  

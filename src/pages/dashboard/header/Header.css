@@ -14,33 +14,23 @@
     align-items: center;
     justify-content: space-between;
     gap: 776px;
-}
-
-@media (max-width: 360px) {
-  .header-dashboard {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 12px 10px;
-    gap: 13px;
   }
 
-  .button-dashboard-header {
-    width: 313px;
+  @media (max-width: 780px) {
+    .title {
+      gap: 23px;
+    }
   }
-
-  .add-widget-btn {
-    width: 125px;
+  
+  @media (max-width: 1024px) {
+    .title {
+      gap: 264px; 
+    }
   }
-
-  .title{
-    display: flex;
-    align-items: center;
-    gap: 10px;
+  
+  @media (max-width: 1440px) {
+    .title {
+      gap: 200px; 
+    }
   }
-}
-
-@media (max-width: 780px) {
-    
-    
-}
+  

@@ -8,10 +8,3 @@
     width: 440px;
     height: 193px;
 }
-
-@media (max-width: 360px){
-    .inner-widget-card{
-        width: 298px;
-        height: 173px;
-    }
-}

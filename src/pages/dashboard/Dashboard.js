@@ -2,7 +2,7 @@ import { Box } from "@chakra-ui/react";
 import Header from "./header/Header";
 import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
-import Categories from "./catagories/Catagories";
+import Categories from "./catagories/Categories";
 import "./Dashboard.css";
 
 const Dashboard = ({ setSearch, search, keyDown}) => {
@@ -11,7 +11,7 @@ const Dashboard = ({ setSearch, search, keyDown}) => {
 
   useEffect(() => {
     
-    if (search && keyDown) {
+    if (search) {
       const filtered = data?.map((cat) => ({
         ...cat,
         widgets: cat.widgets.filter(
@@ -35,7 +35,7 @@ const Dashboard = ({ setSearch, search, keyDown}) => {
     <Box className="dashboard" border="1px" bgColor={"blue.50"} h="92%">
       <Header />
       {filteredData?.map((cat) => (
-        <div className="categories-container">
+        <div className="categories-container" data-testid="categories-container">
           <Categories categoryName={cat.name} widgets={cat.widgets} />
         </div>
       ))}
